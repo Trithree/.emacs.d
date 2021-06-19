@@ -18,9 +18,7 @@
     "cc" 'evilnc-copy-and-comment-lines
     "cp" 'evilnc-comment-or-uncomment-paragraphs
     "r" 'xref-find-references
-    "d" 'xref-find-definitions
-    "n" 'flycheck-next-error
-    "p" 'flycheck-previous-error))
+    "d" 'xref-find-definitions))
 
 (use-package evil
   :config

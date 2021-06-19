@@ -116,7 +116,6 @@
               ("C-c d" . xref-find-definitions)
               ("C-c r" . xref-find-references))
   :config
-  (setq lsp-ui-flycheck-enable t)
   (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
   (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
   :commands lsp-ui-mode)

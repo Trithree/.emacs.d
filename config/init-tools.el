@@ -43,7 +43,9 @@
 
 ;; ******************** syntax checking ********************
 (use-package flycheck
-  :hook (prog-mode . flycheck-mode))
+  :hook (prog-mode . flycheck-mode)
+  :bind (("M-n" . flycheck-next-error)
+         ("M-p" . flycheck-previous-error)))
 
 ;; ******************** quickrun ********************
 (use-package quickrun)
