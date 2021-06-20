@@ -46,6 +46,7 @@
 ;; ********************     ivy    ********************
 ;; Settings for ivy & counsel & swiper
 (use-package ivy
+  :demand
   :diminish
   :hook (after-init . ivy-mode)
   :config

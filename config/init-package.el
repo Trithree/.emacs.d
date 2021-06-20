@@ -17,11 +17,8 @@
 (eval-when-compile
   (require 'use-package))
 
-(setq use-package-always-ensure t
-      use-package-always-defer t
-      use-package-always-demand nil
-      use-package-expand-minimally t
-      use-package-verbose t)
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
 
 ;; auto update packages
 (use-package auto-package-update
