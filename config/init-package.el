@@ -5,12 +5,9 @@
 ;;; Code:
 
 ;;; Settings for package archives
-;; (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-;;                          ("melpa" . "http://elpa.emacs-china.org/melpa/")))
-;; (package-initialize)
-(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
-(package-initialize) ;; You might already have this line
+(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+                         ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+(package-initialize)
 
 ;; Settings for use-package package
 (unless (package-installed-p 'use-package)
@@ -20,9 +17,11 @@
 (eval-when-compile
   (require 'use-package))
 
-;; use-package-always-ensure to be global for all packages
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
+(setq use-package-always-ensure t
+      use-package-always-defer t
+      use-package-always-demand nil
+      use-package-expand-minimally t
+      use-package-verbose t)
 
 ;; auto update packages
 (use-package auto-package-update

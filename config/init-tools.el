@@ -6,7 +6,6 @@
 
 ;; Settings for which-key - suggest next key
 (use-package which-key
-  :defer nil
   :config (which-key-mode))
 
 ;; undo tree
